@@ -24,6 +24,20 @@ var number=function(array){
 
 
 
+const arr = N => Array.from({length: N}, (v, i) => i);
+
+// Use an arrow function that returns:
+// Array.from(creates an object of length N, assigns index number of current element to i element onto the object)
+
+
+
+
+
+
+
+
+
+
 // # 3
 // Drone Fly-By
 // https://www.codewars.com/kata/58356a94f8358058f30004b5/train/javascript
@@ -67,6 +81,13 @@ function getAverage(marks){
   }
 
 
+
+
+
+
+
 // #5
 // THE SOUL OF WIT: REVERSE AN ARRAY
 // https://www.codewars.com/kata/59b81886460387d8fc000043
+
+
