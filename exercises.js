@@ -1,5 +1,5 @@
 // ---------------------
-// Define a function that takes a string and an integer of i and creates a new array of length i where each value is equal to the string passed in
+// 1. Define a function that takes a string and an integer of i and creates a new array of length i where each value is equal to the string passed in
 // myFunction('sunshine', 3) => ['sunshine', 'sunshine', 'sunshine'];
 // ---------------------
 
@@ -36,7 +36,7 @@ function repeats(str1, reps) {
 // -----------------------------------------------
 
 // ---------------------
-// Define a function that takes an array and reverses all the values in an array
+// 2. Define a function that takes an array and reverses all the values in an array
 // The function should not mutate the original array
 // ---------------------
 
@@ -60,12 +60,33 @@ return newArray.reverse();
 // -----------------------------------------------
 
 // ---------------------
-// Define a function that takes an array and removes all falsy values from the array
+// 3. Define a function that takes an array and removes all falsy values from the array
 // ---------------------
 
 // Put your answer below -------------------------
 
+// Cycle through the array.
+// If the value equals false, delete the array element. Not allowed.
+// return the modified array.
+// Cannot delete.
+// Create a duplicate array? 
+// Splice the array?
 
+
+function removeFalse(arr1){
+
+    for (let i = 0; i < arr1.length; i++) {
+
+        if (!arr1[i]) {
+            arr1.splice(i,1);
+            
+        }
+
+    }
+    
+    return arr1;
+    
+}
 
 
 
