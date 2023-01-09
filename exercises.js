@@ -152,6 +152,30 @@ function arrayNowObject(inputArray) {
 
 
 
+// Create a unique output array.
+// Cycle through the input array. 
+// Add each array element to the new array as long as it does not match anything in the input array. 
+
+
+function removeDuplicates(inputArray) {
+
+    const uniqueArray = [];
+
+    // Look at the first element in the input array. It is 3. 
+    // Now check if that 3 value is ALSO in the uniqueArray. 
+    // If the three value is NOT in the uniqueArray, .push that value to the uniqueArray.
+    // Move to the next array element. 
+
+    for (let i = 0; i < inputArray.length; i++) {
+
+            if(!uniqueArray.includes(inputArray[i])) {
+                uniqueArray.push(inputArray[i]);
+            }
+    }
+    return uniqueArray;
+}
+
+
 
 
 
