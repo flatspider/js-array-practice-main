@@ -6,6 +6,25 @@
 // Put your answer below -------------------------
 
 
+// Take in a string and an integer as arguments. 
+// Create a new array. 
+// Push/print to the new array the string integer times. 
+
+
+function repeats(str1, reps) {
+
+    const output = [];
+
+    for (let i = 0; i < reps; i++) {
+        output.push(str1);
+    }
+
+
+    return output;
+
+}
+
+
 
 
 
