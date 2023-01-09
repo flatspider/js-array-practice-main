@@ -98,12 +98,38 @@ function removeFalse(arr1){
 // -----------------------------------------------
 
 // ---------------------
-// Define a function that takes an array of nested arrays and returns an object composed of propeties equal to each nested array
+// 4. Define a function that takes an array of nested arrays and returns an object composed of properties equal to each nested array
 // const myArray = [['name', 'Charlie'], ['color', 'brown'], ['age', 10]];
 // returns { name: 'Charlie', color: 'brown', age: 10 };
 // ---------------------
 
 // Put your answer below -------------------------
+
+// Input is an array of nested arrays. Access via array[0][0]...
+// Return an object composed of properties equal to each nested array. 
+
+// For example: there is an array containing: [  ['name', 'Charlie],['color','brown'] ];
+// Convert from a single big array. 
+// To an object containing each array pair as a KEY and then a VALUE. 
+// The object.'myArray[0][0]' = myArray.[0][1]
+// Get the string. Create the property. Then set the property to the second...etc value. 
+
+function arrayNowObject(inputArray) {
+
+    // Each nested array will only have two values. 
+    // inputArray.length = 3. 
+
+    const newObject = {};
+
+    for (let i = 0; i < inputArray.length; i++) {
+        // This will place you into the big outer arrays.
+
+        newObject[inputArray[i][0]] = inputArray[i][1];  //Never forget the double brackets.
+      
+        }
+
+    return newObject;
+}
 
 
 
@@ -117,7 +143,7 @@ function removeFalse(arr1){
 // -----------------------------------------------
 
 // ---------------------
-// Define a function that takes an array and removes duplicate values
+// 5. Define a function that takes an array and removes duplicate values
 // [1,2,3,4,5,4,3] should return [1,2,3,4,5]
 // ---------------------
 
@@ -135,7 +161,7 @@ function removeFalse(arr1){
 // -----------------------------------------------
 
 // ---------------------
-// Define a function that takes two arrays and returns true if they have identical values (order does not matter), it should return false otherwise
+// 6. Define a function that takes two arrays and returns true if they have identical values (order does not matter), it should return false otherwise
 // [1,2,3,4] and [1,2,3,4] should return true
 // [1,2,3,4,5] and [1,2,3,4] should return false
 // [1,2,3,4] and [1,2,3,4,4] should return false
@@ -166,7 +192,7 @@ function removeFalse(arr1){
 //////////////////////////////////////////////////
 
 // ---------------------
-// Define a function that takes an array and returns a new array with all sub-array elements concatenated into it
+// 7. Define a function that takes an array and returns a new array with all sub-array elements concatenated into it
 // [0, 1, 2, [3, 4]] should return [0, 1, 2, 3, 4]
 // [0, 1, 2, [[[3, 4]]]] should return [0, 1, 2, 3, 4]
 // DO NOT USE Array.prototype.flat()
