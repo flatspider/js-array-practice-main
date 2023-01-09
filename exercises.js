@@ -194,8 +194,32 @@ function removeDuplicates(inputArray) {
 
 // Put your answer below -------------------------
 
+// Order does not matter. 
+
+// Check if the length is the same. If not true, return false.
+
+// Cycle through the two arrays.
+
+// Use the includes function. Same length and each value is included, they must be identical.
+
+// If a single value does not match, set identical to false. 
+
+function identicalArrayCheck(inputArray1, inputArray2){
+
+let identical = true;
+
+if (inputArray1.length != inputArray2.length) { identical = false; }
 
 
+    for (let i = 0; i < inputArray1.length; i++) {
+        if (!inputArray1.includes(inputArray2[i])){
+            identical = false;
+        }
+    }
+
+return identical;
+
+}
 
 
 
