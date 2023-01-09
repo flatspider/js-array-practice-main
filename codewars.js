@@ -28,7 +28,25 @@ var number=function(array){
 // Drone Fly-By
 // https://www.codewars.com/kata/58356a94f8358058f30004b5/train/javascript
 
+function flyBy(lamps, drone){
+  
+    // get the length of drone;
+    // create a string that is length long of o
+    // concatenate with x of length (lamps - drone.length)
 
+    // Must have condition for when the drone flys past all of the lights.
+    
+    
+    let lampsOn = drone.length;
+    let lampsOff = lamps.length - lampsOn;
+    
+    if (lampsOn > lamps.length) {
+      return 'o'.repeat(lamps.length);
+    }
+    
+    return 'o'.repeat(lampsOn) + 'x'.repeat(lampsOff);
+  
+  }
 
 
 // # 4
