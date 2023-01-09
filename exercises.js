@@ -42,13 +42,19 @@ function repeats(str1, reps) {
 
 // Put your answer below -------------------------
 
+// Take in an array and reverse it. The .reverse() method mutates the original array, so you need to make a copy. 
 
+function reverseArray(arr1){
 
+let newArray = []
 
+for (let i = 0; i < arr1.length; i++) {
+    newArray[i] = arr1[i];
+}
 
+return newArray.reverse();
 
-
-
+}
 
 
 // -----------------------------------------------
