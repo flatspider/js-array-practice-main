@@ -1,3 +1,9 @@
+//Add IIFE
+
+
+(function() {
+    "use strict";
+
 // # 1
 // Testing 1-2-3
 // https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9/train/javascript
@@ -92,3 +98,5 @@ function getAverage(marks){
 
 
 // Use the map function to work from end to start.
+
+})();
