@@ -91,3 +91,4 @@ function getAverage(marks){
 // https://www.codewars.com/kata/59b81886460387d8fc000043
 
 
+// Use the map function to work from end to start.
