@@ -18,19 +18,8 @@ function repeats(str1, reps) {
     for (let i = 0; i < reps; i++) {
         output.push(str1);
     }
-
-
     return output;
-
 }
-
-
-
-
-
-
-
-
 
 
 // -----------------------------------------------
@@ -49,10 +38,10 @@ function reverseArray(arr1){
 let newArray = []
 
 for (let i = 0; i < arr1.length; i++) {
-    newArray[i] = arr1[i];
+    newArray.unshift(arr1[i]);
 }
 
-return newArray.reverse();
+return newArray;
 
 }
 
@@ -76,6 +65,7 @@ return newArray.reverse();
 function removeFalse(arr1){
 
     for (let i = 0; i < arr1.length; i++) {
+        // Can coerce to true boolean with !!
 
         if (!arr1[i]) {
             arr1.splice(i,1);
@@ -177,7 +167,12 @@ function removeDuplicates(inputArray) {
 
 
 
+/*
+The indexOf() method returns the position of the first occurrence of a value in a string.
 
+The indexOf() method returns -1 if the value is not found.
+
+*/
 
 
 
@@ -204,19 +199,32 @@ function removeDuplicates(inputArray) {
 
 // If a single value does not match, set identical to false. 
 
+// This function may not work. Need to add additional check value. 
+
 function identicalArrayCheck(inputArray1, inputArray2){
 
 let identical = true;
 
 if (inputArray1.length != inputArray2.length) { identical = false; }
 
+    // Just calling .sort() will convert your array to strings. 
+
+    inputArray1.sort();
+    inputArray2.sort();
+
 
     for (let i = 0; i < inputArray1.length; i++) {
-        if (!inputArray1.includes(inputArray2[i])){
+
+        if (inputArray1[i] != inputArray2[i]){
             identical = false;
+
         }
     }
 
+
+
+
+    
 return identical;
 
 }
@@ -242,6 +250,45 @@ return identical;
 // ---------------------
 
 // Put your answer below -------------------------
+
+// Input takes in an array. 
+// Check for the array length is at each sub array. 
+// If greater than 1, then iteratively raise the sub array. Take the values and add to the original array.
+
+function flattenArray(inputArray) {
+
+    const flatArray = [];
+
+
+    for (i = 0; i < inputArray.length; i++) {
+
+        if (inputArray[i].length > 1){
+            // Cycle through the nested array. 
+            // Push those values to flatArray.
+
+            for (let j = 0; j < inputArray[i].length; j++){
+
+                flatArray.push(inputArray[i][j])
+
+
+
+            }
+
+
+
+
+
+        } else {
+            flatArray.push(inputArray[i]);
+        }
+
+
+    }
+
+    return flatArray;
+
+
+}
 
 
 
